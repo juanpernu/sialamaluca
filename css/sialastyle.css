@@ -1,0 +1,124 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  background-color: rgba(0,0,0, .05);
+}
+
+.logo {
+  width: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-brand {
+  padding: 10px 15px;
+}
+
+.navbar-inverse {
+  background-color: #333333;
+}
+
+nav #navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+}
+
+nav #navbar a:hover,
+nav #navbar a:active {
+  color: #F7DA03;
+}
+
+nav #navbar ul li {
+  padding-top: 15px;
+  margin-right: 2%;
+  float: left;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../images/background-intro.jpg');
+}
+
+.intro .logo {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 30%;
+}
+
+.space-top {
+  padding-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+p {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.4em;
+  font-weight: 200;
+  line-height: 1.5em;
+  padding: 10px 0;
+}
+
+h2 strong {
+  color: #F7DA03;
+}
+
+h2 {
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 3.3em;
+  padding: 10px 10px;
+}

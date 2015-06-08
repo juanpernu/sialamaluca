@@ -93,6 +93,8 @@ nav #navbar ul li {
   top: 40%;
   width: 100%;
   height: 30%;
+  animation-name: example;
+    animation-duration: 1s;
 }
 
 .space-top {
@@ -101,6 +103,14 @@ nav #navbar ul li {
 
 .text-center {
   text-align: center;
+}
+
+.yellow {
+  background-color: #F7DA03;
+}
+
+.start-page {
+  margin-bottom: 40px;
 }
 
 p {
@@ -116,9 +126,49 @@ h2 strong {
   color: #F7DA03;
 }
 
+.yellow h2 strong {
+  color: #fff;
+}
+
 h2 {
   font-weight: 200;
   text-transform: uppercase;
   font-size: 3.3em;
   padding: 10px 10px;
+}
+
+/* LOGO ANIMATION */
+
+#logoSiala {
+  animation: fadeLogo 2s;
+    -webkit-animation: fadeLogo 2s;
+    -moz-animation: fadeLogo 2s;
+    -o-animation: fadeLogo 2s;
+}
+
+@keyframes fadeLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
